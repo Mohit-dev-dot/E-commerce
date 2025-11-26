@@ -1,0 +1,7 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+/* basic app styles */
+body { @apply bg-gray-50 text-gray-900; }
+.dark body { @apply bg-gray-900 text-gray-100; }
+.card { @apply bg-white dark:bg-gray-800 rounded-lg shadow p-4; }
+/* sticky navbar spacing */
+nav { position: sticky; top: 0; z-index: 30; }
