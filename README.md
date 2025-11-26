@@ -1,4 +1,4 @@
-# Ecommerce Upgraded
+# Ecommerce
 
 Features:
 - React Router (PDP, Wishlist, Cart)
