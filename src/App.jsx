@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 import React from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
@@ -44,8 +45,9 @@ export default function App(){
               <RoutesWrapper/>
             </main>
 
-            {/* ✅ Add Analytics tracking here */}
+            
             <Analytics />
+             <SpeedInsights />
 
             <Toaster/>
           </div>
