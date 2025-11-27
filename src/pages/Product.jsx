@@ -6,13 +6,11 @@ import { WishlistContext } from '../context/WishlistContext';
 import toast from 'react-hot-toast';
 import ImageGallery from '../components/ImageGallery';
 
-// Optional: import extra gallery images properly
-// import img2 from '../assets/backpack.png';
-// import img3 from '../assets/shoes.png';
+
 
 export default function Product() {
   const { id } = useParams();
-  const product = products.find(p => p.id === Number(id));  // ✅ FIXED: id must be Number
+  const product = products.find(p => p.id === Number(id)); 
 
   const { dispatch } = useContext(CartContext);
   const { dispatch: wdispatch, items } = useContext(WishlistContext);
