@@ -14,14 +14,16 @@ export default function Home(){
   const [loading,setLoading]=useState(false);
 
   // FIXED: use products instead of PRODUCTS
-  const list = useMemo(()=> 
-    products.filter(p=> 
-      (category==='All' || p.category===category) &&
-      p.name.toLowerCase().includes(query.toLowerCase()) &&
-      p.price<=priceRange[0] &&
-      p.rating>=rating 
-    ), 
-  [query,category,priceRange,rating]);
+const list = useMemo(() =>
+  products.filter(p =>
+    (category === 'All' || p.category === category) &&
+    p.name.toLowerCase().includes(query.toLowerCase()) &&
+    p.price >= priceRange[0] &&
+    p.price <= priceRange[1] &&
+    p.rating >= rating
+  ),
+[query, category, priceRange, rating]);
+
 
   const sorted = useMemo(()=>{
     const copy=[...list];
